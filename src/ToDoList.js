@@ -1,9 +1,14 @@
+import ToDoListItem from "./ToDoListItem";
+
 const ToDoList = () => {
   return (
-    <ul>
-      <li>Learn React</li>
-      <li>Learn the MERN-Stack</li>
-    </ul>
+    <div className="todo-div">
+      <h1>React To Do</h1>
+      <ul>
+        <ToDoListItem item="Finish Lesson" />
+        <ToDoListItem item="Finish Lab" />
+      </ul>
+    </div>
   );
 }
  
