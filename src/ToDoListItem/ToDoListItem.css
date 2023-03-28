@@ -1,0 +1,29 @@
+h1 {
+  color: rgb(51, 49, 45);
+}
+
+.todo-div li {
+  font-weight: 800;
+  text-transform: capitalize;
+  font-size: 3vmin;
+  border: 1px solid white;
+  margin: 1vmin;
+  padding: 4vmin;
+  border-radius: 8px;
+}
+
+.todo-div li:hover {
+  color: rgb(78, 87, 188);
+}
+
+.todo-div li {
+  list-style: none;
+}
+
+.number-style {
+  background-color: rgba(0, 0, 0, 0.78);
+  color: white;
+  padding: 10px 17px;
+  margin-right: 1vmin;
+  border-radius: 50px;
+}

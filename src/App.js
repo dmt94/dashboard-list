@@ -1,10 +1,11 @@
 import './App.css';
-import ToDoList from './ToDoList';
+import ToDoList from './ToDoList/ToDoList';
 
 function App() {
+  let showTodos = true;
   return (
     <div className="App">
-      <ToDoList/>
+      {showTodos && <ToDoList/>}
     </div>
   );
 }
