@@ -3,17 +3,21 @@ h1 {
 }
 
 .todo-div li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-weight: 800;
   text-transform: capitalize;
-  font-size: 3vmin;
+  font-size: 4vmin;
   border: 1px solid white;
-  margin: 1vmin;
-  padding: 4vmin;
+  margin: 2vmin;
+  padding: 2vmin;
   border-radius: 8px;
+  width: 80%;
 }
 
-.todo-div li:hover {
-  color: rgb(78, 87, 188);
+.todo-div li span {
+  margin: 0 4vmin;
 }
 
 .todo-div li {
@@ -26,4 +30,17 @@ h1 {
   padding: 10px 17px;
   margin-right: 1vmin;
   border-radius: 50px;
+}
+
+.btn-check {
+  font-size: 4vmin;
+  background-color: rgba(240, 248, 255, 0.248);
+  border: none;
+  outline: 2px solid white;
+  border-radius: 8px;
+}
+
+.btn-check:hover {
+  background-color: rgb(212, 212, 223);
+  cursor: pointer;
 }

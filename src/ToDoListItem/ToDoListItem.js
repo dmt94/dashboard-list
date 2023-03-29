@@ -1,6 +1,11 @@
 import "./ToDoListItem.css"
 
-const ToDoListItem = ({item, idx}) => {
+const ToDoListItem = ({item, idx, completeToDo}) => {
+
+  function handleCompleteToDo(todoIdx) {
+    completeToDo(todoIdx);
+  }
+
   return (
     <li
       style={{
@@ -11,7 +16,15 @@ const ToDoListItem = ({item, idx}) => {
         >
           {idx + 1}
           </span>
-      {item}</li>
+      <span style={{textDecoration: item.completed && "line-through"}}
+        >
+          {item.text}
+          </span>
+      <button 
+        className='btn-check'
+        onClick={() => {handleCompleteToDo(idx)}}
+        >{item.completed ? '❌': '✅'}</button>
+      </li>
    );
 }
  

@@ -1,7 +1,7 @@
 import ToDoListItem from "../ToDoListItem/ToDoListItem"
 import "./ToDoList.css"
 
-const ToDoList = ({todos}) => {
+const ToDoList = ({todos, completeToDo}) => {
   return (
     <div className="todo-div">
       <h1>React To Do</h1>
@@ -11,7 +11,8 @@ const ToDoList = ({todos}) => {
             <ToDoListItem 
               item={todo} 
               key={idx} 
-              idx={idx} 
+              idx={idx}
+              completeToDo={completeToDo} 
               />
           ))
         }
