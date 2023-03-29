@@ -4,3 +4,35 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-todo-visibility,
+.btn-add-todo {
+  margin-top: 5vmin;
+  padding: 2vmin;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(28, 62, 194);
+  color: white;
+  font-weight: 800;
+  font-size: 3vmin;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.btn-todo-visibility:hover,
+.btn-add-todo:hover {
+  cursor: pointer;
+  background-color: rgb(208, 221, 237);
+  color: black;
+}
+
+hr {
+  width: 90%;
+  border: 2px solid black;
+  margin-bottom: 4vmin;
+}
