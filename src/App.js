@@ -10,7 +10,7 @@ function App() {
     {text: "Learn the MERN-Stack", completed: false}
   ]);
   const [showTodos, setShowTodos] = useState(true);
-  
+
   function addToDo(todo) {
     // Replace state, don't mutate it
     setTodos([...todos, todo]);
@@ -22,10 +22,15 @@ function App() {
     setTodos(newTodos);
   }
 
+  function deleteToDo(todoIdx) {
+    let filteredTodos = todos.filter((todoItem, idx) => idx !== todoIdx );
+    setTodos(filteredTodos);
+  }
+
   return (
     <div className="App">
-      <button className='btn-todo-visibility'>{showTodos ? 'HIDE': 'SHOW'}</button>
-      {showTodos && <ToDoList todos={todos} completeToDo={completeToDo}/>}
+      <button className='btn-todo-visibility' onClick={() => (setShowTodos(!showTodos))}>{showTodos ? 'HIDE': 'SHOW'}</button>
+      {showTodos && <ToDoList todos={todos} completeToDo={completeToDo} deleteToDo={deleteToDo}/>}
       <hr />
       <NewToDoForm addToDo={addToDo}/>
     </div>

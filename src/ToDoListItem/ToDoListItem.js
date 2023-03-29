@@ -1,6 +1,6 @@
 import "./ToDoListItem.css"
 
-const ToDoListItem = ({item, idx, completeToDo}) => {
+const ToDoListItem = ({item, idx, completeToDo, deleteToDo}) => {
 
   function handleCompleteToDo(todoIdx) {
     completeToDo(todoIdx);
@@ -22,7 +22,7 @@ const ToDoListItem = ({item, idx, completeToDo}) => {
           </span>
       <button 
         className='btn-check'
-        onClick={() => {handleCompleteToDo(idx)}}
+        onClick={() => {item.completed ? deleteToDo(idx) : handleCompleteToDo(idx)}}
         >{item.completed ? '❌': '✅'}</button>
       </li>
    );
